@@ -1,11 +1,11 @@
 import pika
 
 # RabbitMQ connection parameters
-RABBITMQ_HOST = 'localhost'
+RABBITMQ_HOST = 'localhost' # Change this to the IP address of the RabbitMQ server
 RABBITMQ_PORT = 5672
 RABBITMQ_USERNAME = 'guest'
 RABBITMQ_PASSWORD = 'guest'
-RABBITMQ_QUEUE = 'myqueue'
+RABBITMQ_QUEUE = 'myqueue' # Change this to the name of the right queue to listen to.
 
 def callback(ch, method, properties, body):
     print(f"Received message: {body}")
